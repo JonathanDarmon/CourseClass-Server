@@ -14,21 +14,19 @@ namespace CourseClass.API.Controllers
 {
 
     [Route("api/auth")]
+    [Produces("application/json")]
     [ApiController]
     public class AuthenticationController : ControllerBase
     {
-        private readonly IAdminRepository _repo;
         protected readonly IConfiguration _Configuration;
 
-        public AuthenticationController(IAdminRepository repo, IConfiguration Configuration)
+        public AuthenticationController(IConfiguration Configuration)
         {
-
-            _repo = repo;
             _Configuration = Configuration;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Login([FromBody] LoginModel model, [FromServices] AuthService _authService)
+        public IActionResult Login([FromBody] LoginModel model, [FromServices] AuthService _authService)
         {
             var response = _authService.Authenticate(model.Email, model.Password);
 

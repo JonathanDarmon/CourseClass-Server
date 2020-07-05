@@ -12,6 +12,7 @@ namespace CourseClass.API.Controllers
 {
     [Authorize]
     [Route("api/course")]
+    [Produces("application/json")]
     [ApiController]
     public class CourseController : ControllerBase
     {
@@ -22,7 +23,7 @@ namespace CourseClass.API.Controllers
         }
         #region Get all courses
         [HttpGet]
-        public async Task<IActionResult> GetAllCourses()
+        public IActionResult GetAllCourses()
         {
             var response = _repo.AllCourses;
 
@@ -32,7 +33,7 @@ namespace CourseClass.API.Controllers
 
         #region Get course by Id
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetCourseById([FromRoute] int id)
+        public IActionResult GetCourseById([FromRoute] int id)
         {
             var response = _repo.GetCourseById(id);
 
@@ -42,7 +43,7 @@ namespace CourseClass.API.Controllers
 
         #region Create a new course
         [HttpPost("create")]
-        public async Task<IActionResult> AddNewCourse([FromBody] Course body)
+        public IActionResult AddNewCourse([FromBody] Course body)
         {
             var response = _repo.AddCourse(body);
             return Ok(response.Result.ToString());
@@ -51,7 +52,7 @@ namespace CourseClass.API.Controllers
 
         #region Edit existing course
         [HttpPut("edit")]
-        public async Task<IActionResult> EditStudent([FromBody] Course body)
+        public IActionResult EditStudent([FromBody] Course body)
         {
             var response = _repo.UpdateCourse(body);
             return Ok(response);
@@ -60,7 +61,7 @@ namespace CourseClass.API.Controllers
 
         #region Delete course by id
         [HttpDelete("delete/{id}")]
-        public async Task<IActionResult> DeleteCourse([FromRoute] int id)
+        public IActionResult DeleteCourse([FromRoute] int id)
         {
             var response = _repo.DeleteCourse(id);
             return Ok(response.Result.ToString());

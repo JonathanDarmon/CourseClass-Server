@@ -43,14 +43,17 @@ namespace CourseClass.API
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("Roles", policy => policy.RequireClaim("Admin", "Manager", "Sales"));
+                options.AddPolicy("Administrator", policy => policy.RequireClaim("Admin", "Manager"));
             });
 
-            services.AddCors();
-            services.AddControllers();
 
             services.AddDbContext<ManagmentContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("StudentManagment")));
+
+            services.AddCors();
+            services.AddControllers();
+            services.AddSwaggerGen();
+
             services.AddScoped<AuthService, AuthService>();
             services.AddScoped<IAdminRepository, AdminRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
@@ -66,9 +69,22 @@ namespace CourseClass.API
             }
 
             app.UseHttpsRedirection();
-            app.UseCors("CorsPolicy");
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
             app.UseStatusCodePages();
 
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CourseClass API V1");
+                c.RoutePrefix = string.Empty;
+            });
 
             app.UseRouting();
 

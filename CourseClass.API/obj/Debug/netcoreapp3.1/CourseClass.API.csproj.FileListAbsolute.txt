@@ -1,8 +1,6 @@
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.csprojAssemblyReference.cache
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.AssemblyInfoInputs.cache
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.AssemblyInfo.cs
-C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.csproj.CoreCompileInputs.cache
-C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -136,3 +134,10 @@ C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClas
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.dll
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.pdb
 C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.genruntimeconfig.cache
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.API\obj\Debug\netcoreapp3.1\CourseClass.API.MvcApplicationPartsAssemblyInfo.cache

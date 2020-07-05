@@ -16,6 +16,7 @@ namespace CourseClass.API.Controllers
 {
     [Authorize]
     [Route("api/admin")]
+    [Produces("application/json")]
     [ApiController]
     public class AdminController : ControllerBase
     {
@@ -27,8 +28,12 @@ namespace CourseClass.API.Controllers
         }
 
         #region Get all admins
+        /// <summary>
+        /// Get all administrators
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
-        public async Task<IActionResult> GetAllAdmins()
+        public IActionResult GetAllAdmins()
         {
             var response = _repo.AllAdmins;
 
@@ -37,8 +42,13 @@ namespace CourseClass.API.Controllers
         #endregion
 
         #region Get admin by Id
+        /// <summary>
+        /// Get admin by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetAdminById([FromRoute] int id)
+        public IActionResult GetAdminById([FromRoute] int id)
         {
             var response = _repo.GetAdminById(id);
 
@@ -47,8 +57,13 @@ namespace CourseClass.API.Controllers
         #endregion
 
         #region Create a new admin
+        /// <summary>
+        /// Create admin
+        /// </summary>
+        /// <param name="body"></param>
+        /// <returns></returns>
         [HttpPost("create")]
-        public async Task<IActionResult> AddNewAdmin([FromBody] Administrator body)
+        public IActionResult AddNewAdmin([FromBody] Administrator body)
         {
             var response = _repo.AddAdmin(body);
             return Ok(response.Result.ToString());
@@ -56,8 +71,13 @@ namespace CourseClass.API.Controllers
         #endregion
 
         #region Edit existing admin
+        /// <summary>
+        /// Update admin
+        /// </summary>
+        /// <param name="body"></param>
+        /// <returns></returns>
         [HttpPut("edit")]
-        public async Task<IActionResult> EditAdmin([FromBody] Administrator body)
+        public IActionResult EditAdmin([FromBody] Administrator body)
         {
             var response = _repo.UpdateAdmin(body);
             return Ok(response);
@@ -65,8 +85,13 @@ namespace CourseClass.API.Controllers
         #endregion
 
         #region Delete admin by id
+        /// <summary>
+        /// Delete admin by id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpDelete("delete/{id}")]
-        public async Task<IActionResult> DeleteAdmin([FromRoute] int id)
+        public IActionResult DeleteAdmin([FromRoute] int id)
         {
             var response = _repo.DeleteAdmin(id);
             return Ok(response.Result.ToString());

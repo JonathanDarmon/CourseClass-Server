@@ -36,18 +36,16 @@ namespace CourseClass.BL.Services
 
             var response = new
             {
-                Id = admin.Id,
+                admin.Id,
                 Name = admin.Email,
                 Email = admin.Name,
-                Role = UppercaseFirst.ApplyUppercaseFirst(admin.Role.ToString()),
-                Phone = 0 + admin.Phone,
+                Role = admin.Role.ToString(),
+                Phone = admin.Phone,
                 Token = GenerateJSONWebToken(admin)
             };
 
             return response;
         }
-
-
 
         private string GenerateJSONWebToken(Administrator userinfo)
         {
@@ -57,7 +55,7 @@ namespace CourseClass.BL.Services
             var claims = new[]
             {
                 new Claim("Id", userinfo.Id.ToString()),
-                new Claim(ClaimTypes.Role, UppercaseFirst.ApplyUppercaseFirst(userinfo.Role.ToString())),
+                new Claim("Role", userinfo.Role),
                 new Claim(ClaimTypes.Email, userinfo.Email),
             };
 

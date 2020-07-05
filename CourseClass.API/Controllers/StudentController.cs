@@ -12,6 +12,7 @@ namespace CourseClass.API.Controllers
 {
     [Authorize]
     [Route("api/student")]
+    [Produces("application/json")]
     [ApiController]
     public class StudentController : ControllerBase
     {
@@ -20,9 +21,10 @@ namespace CourseClass.API.Controllers
         {
             _repo = repo;
         }
+
         #region Get all students
         [HttpGet]
-        public async Task<IActionResult> GetAllStudents()
+        public IActionResult GetAllStudents()
         {
             var response = _repo.AllStudents;
 
@@ -32,7 +34,7 @@ namespace CourseClass.API.Controllers
 
         #region Get student by Id
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetStudentById([FromRoute] int id)
+        public IActionResult GetStudentById([FromRoute] int id)
         {
             var response = _repo.GetStudentById(id);
 
@@ -42,7 +44,7 @@ namespace CourseClass.API.Controllers
 
         #region Create a new student
         [HttpPost("create")]
-        public async Task<IActionResult> AddNewStudent([FromBody] Student body)
+        public IActionResult AddNewStudent([FromBody] Student body)
         {
             var response = _repo.AddStudent(body);
             return Ok(response.Result.ToString());
@@ -51,7 +53,7 @@ namespace CourseClass.API.Controllers
 
         #region Edit existing student
         [HttpPut("edit")]
-        public async Task<IActionResult> EditStudent([FromBody] Student body)
+        public IActionResult EditStudent([FromBody] Student body)
         {
             var response = _repo.UpdateStudent(body);
             return Ok(response);
@@ -60,7 +62,7 @@ namespace CourseClass.API.Controllers
 
         #region Delete student by id
         [HttpDelete("delete/{id}")]
-        public async Task<IActionResult> DeleteStudent([FromRoute] int id)
+        public IActionResult DeleteStudent([FromRoute] int id)
         {
             var response = _repo.DeleteStudent(id);
             return Ok(response.Result.ToString());

@@ -1,0 +1,9 @@
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\bin\Debug\netstandard2.0\CourseClass.BL.deps.json
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\bin\Debug\netstandard2.0\CourseClass.BL.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\bin\Debug\netstandard2.0\CourseClass.BL.pdb
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\obj\Debug\netstandard2.0\CourseClass.BL.csprojAssemblyReference.cache
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\obj\Debug\netstandard2.0\CourseClass.BL.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\obj\Debug\netstandard2.0\CourseClass.BL.AssemblyInfo.cs
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\obj\Debug\netstandard2.0\CourseClass.BL.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\obj\Debug\netstandard2.0\CourseClass.BL.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.BL\obj\Debug\netstandard2.0\CourseClass.BL.pdb

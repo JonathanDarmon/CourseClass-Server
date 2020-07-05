@@ -1,0 +1,12 @@
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\obj\Debug\netstandard2.0\CourseClass.Data.csprojAssemblyReference.cache
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\obj\Debug\netstandard2.0\CourseClass.Data.AssemblyInfoInputs.cache
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\obj\Debug\netstandard2.0\CourseClass.Data.AssemblyInfo.cs
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\obj\Debug\netstandard2.0\CourseClass.Data.csproj.CoreCompileInputs.cache
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\bin\Debug\netstandard2.0\CourseClass.Data.deps.json
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\bin\Debug\netstandard2.0\CourseClass.Data.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\bin\Debug\netstandard2.0\CourseClass.Data.pdb
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\bin\Debug\netstandard2.0\CourseClass.BL.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\bin\Debug\netstandard2.0\CourseClass.BL.pdb
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\obj\Debug\netstandard2.0\CourseClass.Data.csproj.CopyComplete
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\obj\Debug\netstandard2.0\CourseClass.Data.dll
+C:\Users\User\OneDrive\שולחן העבודה\dev\CourseClass-Server\CourseClass.Data\obj\Debug\netstandard2.0\CourseClass.Data.pdb

@@ -1,14 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
-using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Text;
-using System.Threading.Tasks;
 using CourseClass.API.Models.LoginModel;
-using CourseClass.BL.Contracts;
-using CourseClass.BL.Services;
+using CourseClass.BL.Services.Authentication;
 
 namespace CourseClass.API.Controllers
 {
@@ -28,12 +21,14 @@ namespace CourseClass.API.Controllers
         [HttpPost]
         public IActionResult Login([FromBody] LoginModel model, [FromServices] AuthService _authService)
         {
-            var response = _authService.Authenticate(model.Email, model.Password);
+                object response = _authService.Authenticate(model.Email, model.Password);
 
-            if (response == null)
-                return BadRequest(new { message = "Username or password is incorrect" });
+                if (response == null)
+                    return BadRequest(new { message = "Username or password is incorrect" });
 
             return Ok(response);
+
+            
         }
     }
 }

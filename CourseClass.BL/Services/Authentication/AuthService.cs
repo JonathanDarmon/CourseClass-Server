@@ -11,7 +11,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.JsonWebTokens;
 
-namespace CourseClass.BL.Services
+namespace CourseClass.BL.Services.Authentication
 {
     public class AuthService
     {
@@ -27,12 +27,10 @@ namespace CourseClass.BL.Services
             Administrator admin = _repo.FindAdminByEmail(email);
 
             if (admin == null)
-                throw new Exception("email doesn't exist");
+                throw new Exception($"Email {email} doesn't exist");
 
             if (admin.Password != password)
                 throw new Exception("Incorrect password");
-
-            //TODO: Create token generator
 
             var response = new
             {

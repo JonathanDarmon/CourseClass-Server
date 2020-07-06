@@ -8,9 +8,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using CourseClass.BL.Contracts;
-using CourseClass.BL.Services;
 using CourseClass.Data;
 using CourseClass.Data.Repositories;
+using CourseClass.BL.Services.Authentication;
 
 namespace CourseClass.API
 {

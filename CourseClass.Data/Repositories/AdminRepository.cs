@@ -83,15 +83,8 @@ namespace CourseClass.Data.Repositories
 
         public Administrator FindAdminByEmail(string email)
         {
-            try
-            {
                 Administrator response = _context.Admins.Where(a => a.Email == email).FirstOrDefault();
                 return response;
-            }
-            catch (KeyNotFoundException ex)
-            {
-                throw new Exception("Email not found", ex);
-            }
         }
     }
 }

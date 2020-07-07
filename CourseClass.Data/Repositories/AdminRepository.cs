@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CourseClass.BL.Contracts;
 using CourseClass.BL.Domain;
+using System.Reflection;
 
 namespace CourseClass.Data.Repositories
 {
@@ -66,7 +67,20 @@ namespace CourseClass.Data.Repositories
         {
             if (admin != null)
             {
-                _context.Admins.Update(admin);
+                var data = _context.Admins.Find(admin.Id);
+
+                Type t = typeof(Administrator);
+                PropertyInfo[] propInfos = t.GetProperties(BindingFlags.Public | BindingFlags.Instance);
+                foreach (var item in propInfos)
+                {
+                    var fieldValue = item.GetValue(admin);
+                    if (fieldValue != null)
+                    {
+                        item.SetValue(data, fieldValue);
+                    }
+                }
+
+                _context.Admins.Update(data);
                 Commit();
                 return Task.FromResult(true);
             }

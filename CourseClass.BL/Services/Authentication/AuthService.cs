@@ -54,6 +54,7 @@ namespace CourseClass.BL.Services.Authentication
             {
                 new Claim("Id", userinfo.Id.ToString()),
                 new Claim("Role", userinfo.Role),
+                new Claim(ClaimTypes.Role, userinfo.Role),
                 new Claim(ClaimTypes.Email, userinfo.Email),
             };
 

@@ -33,6 +33,9 @@ namespace CourseClass.API.Controllers
         /// Get all administrators
         /// </summary>
         /// <returns></returns>
+        //[Authorize(Roles = "Sales")]
+        //[Authorize(Roles = "Manager")]
+        [Authorize(Policy = "Owner")]
         [HttpGet]
         public IActionResult GetAllAdmins()
         {

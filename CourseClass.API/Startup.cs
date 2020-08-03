@@ -43,7 +43,17 @@ namespace CourseClass.API
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("Administrator", policy => policy.RequireClaim("Admin", "Manager"));
+                options.AddPolicy("Owner", policy =>
+                          policy.RequireClaim("Role", "Owner"));
+
+                //options.AddPolicy("Owner",
+                //policy => policy.RequireRole("Owner"));
+
+                options.AddPolicy("Manager",
+                policy => policy.RequireRole("Manager"));
+
+                options.AddPolicy("Sales",
+                policy => policy.RequireRole("Sales"));
             });
 
 

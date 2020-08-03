@@ -11,6 +11,7 @@ using CourseClass.BL;
 using CourseClass.BL.Contracts;
 using CourseClass.BL.Domain;
 using CourseClass.Data;
+using CourseClass.API.Models.Admin;
 
 namespace CourseClass.API.Controllers
 {
@@ -63,9 +64,18 @@ namespace CourseClass.API.Controllers
         /// <param name="body"></param>
         /// <returns></returns>
         [HttpPost("create")]
-        public IActionResult AddNewAdmin([FromBody] Administrator body)
+        public IActionResult AddNewAdmin([FromBody] CreateAdminModel body)
         {
-            var response = _repo.AddAdmin(body);
+            Administrator user = new Administrator
+            {
+                Name = body.Name,
+                Email = body.Email,
+                Password = body.Password,
+                Phone = body.Phone,
+                Role = body.Role
+            };
+
+            var response = _repo.AddAdmin(user);
             return Ok(response.Result.ToString());
         }
         #endregion

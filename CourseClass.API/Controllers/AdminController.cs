@@ -15,7 +15,7 @@ using CourseClass.API.Models.Admin;
 
 namespace CourseClass.API.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Owner,Manager")]
     [Route("api/admin")]
     [Produces("application/json")]
     [ApiController]
@@ -33,9 +33,6 @@ namespace CourseClass.API.Controllers
         /// Get all administrators
         /// </summary>
         /// <returns></returns>
-        //[Authorize(Roles = "Sales")]
-        //[Authorize(Roles = "Manager")]
-        [Authorize(Policy = "Owner")]
         [HttpGet]
         public IActionResult GetAllAdmins()
         {

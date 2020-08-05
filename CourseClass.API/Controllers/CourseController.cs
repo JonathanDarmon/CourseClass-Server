@@ -10,7 +10,7 @@ using CourseClass.BL.Domain;
 
 namespace CourseClass.API.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Owner,Sales,Manager")]
     [Route("api/course")]
     [Produces("application/json")]
     [ApiController]

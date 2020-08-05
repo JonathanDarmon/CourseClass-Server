@@ -53,7 +53,6 @@ namespace CourseClass.BL.Services.Authentication
             var claims = new[]
             {
                 new Claim("Id", userinfo.Id.ToString()),
-                new Claim("Role", userinfo.Role),
                 new Claim(ClaimTypes.Role, userinfo.Role),
                 new Claim(ClaimTypes.Email, userinfo.Email),
             };

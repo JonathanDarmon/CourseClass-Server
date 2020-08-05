@@ -26,7 +26,6 @@ namespace CourseClass.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
             {
                 options.TokenValidationParameters = new TokenValidationParameters
@@ -43,19 +42,11 @@ namespace CourseClass.API
 
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("Owner", policy =>
-                          policy.RequireClaim("Role", "Owner"));
+                options.AddPolicy("Owner", policy => policy.RequireRole("Owner"));
+                options.AddPolicy("Manager", policy => policy.RequireRole("Manager"));
+                options.AddPolicy("Sales", policy => policy.RequireRole("Sales"));
 
-                //options.AddPolicy("Owner",
-                //policy => policy.RequireRole("Owner"));
-
-                options.AddPolicy("Manager",
-                policy => policy.RequireRole("Manager"));
-
-                options.AddPolicy("Sales",
-                policy => policy.RequireRole("Sales"));
             });
-
 
             services.AddDbContext<ManagmentContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("StudentManagment")));

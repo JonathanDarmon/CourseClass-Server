@@ -27,8 +27,6 @@ namespace CourseClass.API.Controllers
                     return BadRequest(new { message = "Username or password is incorrect" });
 
             return Ok(response);
-
-            
         }
     }
 }

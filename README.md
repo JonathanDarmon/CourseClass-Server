@@ -9,6 +9,6 @@ ___
   * Three-tier Architecture
   
 ## Screenshot
-![Screenshot](Captur.PNG)
-![Screenshot](Captur1.PNG)
-![Screenshot](Captur2.PNG)
+![Screenshot](Captur.png)
+![Screenshot](Captur1.png)
+![Screenshot](Captur2.png)

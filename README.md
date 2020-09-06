@@ -8,7 +8,7 @@ ___
   * SqlServer (EntityFrameworkCore)
   * Three-tier Architecture
   
-## Screenshot
+## Screenshots
 ![Screenshot](Captur.png)
 ![Screenshot](Captur1.png)
 ![Screenshot](Captur2.png)

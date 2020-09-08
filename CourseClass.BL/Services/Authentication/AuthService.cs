@@ -27,11 +27,11 @@ namespace CourseClass.BL.Services.Authentication
             Administrator admin = _repo.FindAdminByEmail(email);
 
             if (admin == null)
-                throw new Exception($"Email {email} doesn't exist");
+                throw new AggregateException($"Email {email} doesn't exist");
 
             if (admin.Password != password)
-                throw new Exception("Incorrect password");
-
+                throw new AggregateException("Incorrect password");
+            
             var response = new
             {
                 admin.Id,

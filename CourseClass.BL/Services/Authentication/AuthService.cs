@@ -35,8 +35,8 @@ namespace CourseClass.BL.Services.Authentication
             var response = new
             {
                 admin.Id,
-                Name = admin.Email,
-                Email = admin.Name,
+                Name = admin.Name,
+                Email = admin.Email,
                 Role = admin.Role.ToString(),
                 Phone = admin.Phone,
                 Token = GenerateJSONWebToken(admin)

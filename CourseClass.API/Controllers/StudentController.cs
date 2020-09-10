@@ -47,7 +47,14 @@ namespace CourseClass.API.Controllers
         public IActionResult AddNewStudent([FromBody] Student body)
         {
             var response = _repo.AddStudent(body);
-            return Ok(response.Result.ToString());
+            if(response.Result == true)
+            {
+                return Ok("User created");
+            }
+            else
+            {
+                return StatusCode(409);
+            }
         }
         #endregion
 

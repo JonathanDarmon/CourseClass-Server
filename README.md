@@ -5,7 +5,7 @@ ___
 
 # Using:
   * DotNet Core 3.1
-  * SqlServer (EntityFrameworkCore)
+  * SQL-Server (EntityFrameworkCore)
   * Three-tier Architecture
   
 ## Screenshots
